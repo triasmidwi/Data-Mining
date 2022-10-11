@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Metode KNN &#8212; Triasmi Dwi Farawati</title>
+    <title>UTS &#8212; Triasmi Dwi Farawati</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Tugas Data Mining" href="notebooks.html" />
@@ -120,7 +122,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Metode KNN
+   UTS
   </a>
  </li>
 </ul>
@@ -329,12 +331,12 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#metode-knn">
    Metode KNN
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#metode-decision-tree">
    Metode Decision Tree
   </a>
@@ -348,7 +350,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Metode KNN</h1>
+                <h1>UTS</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -358,12 +360,12 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#metode-knn">
    Metode KNN
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#metode-decision-tree">
    Metode Decision Tree
   </a>
@@ -378,7 +380,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <p>#UTS</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="uts">
+<h1>UTS<a class="headerlink" href="#uts" title="Permalink to this headline">#</a></h1>
 <p><strong>Nama : Triasmi Dwi Farawati</strong></p>
 <p><strong>NIM : 200411100186</strong></p>
 <p><strong>Kelas : Penambangan Data 5B</strong></p>
@@ -390,7 +393,16 @@ title="Print to PDF"
 </ul>
 <p>Proses analisa dilaporkan dan diupload di github ( menggunakan jupyter book)</p>
 <section id="metode-knn">
-<h1>Metode KNN<a class="headerlink" href="#metode-knn" title="Permalink to this headline">#</a></h1>
+<h2>Metode KNN<a class="headerlink" href="#metode-knn" title="Permalink to this headline">#</a></h2>
+<p>KNN: K Nearest Neighbor adalah salah satu algoritma dasar dalam pembelajaran mesin. Model pembelajaran mesin menggunakan sekumpulan nilai input untuk memprediksi nilai output. KNN adalah salah satu bentuk paling sederhana dari algoritma pembelajaran mesin yang banyak digunakan untuk klasifikasi. Ini mengklasifikasikan titik data tentang bagaimana tetangganya diklasifikasikan</p>
+<p>Metode KNN</p>
+<ol class="simple">
+<li><p>Menentukan nilai K</p></li>
+<li><p>Menghitung jarak antara data uji dengan data latih</p></li>
+<li><p>mengurutkan jarak dari yang terkecil-terbesar</p></li>
+<li><p>mengambil data sebanyak K terdekat</p></li>
+<li><p>memilih kelas mayor</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># melakukan import Library</span>
@@ -417,7 +429,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ba65b1dc-427f-4830-9b1f-fe2405a2f156">
+  <div id="df-a5d65bdb-c13b-4de5-b308-2e3c5bb40ef9">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -518,7 +530,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-ba65b1dc-427f-4830-9b1f-fe2405a2f156')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-a5d65bdb-c13b-4de5-b308-2e3c5bb40ef9')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -569,12 +581,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-ba65b1dc-427f-4830-9b1f-fe2405a2f156 button.colab-df-convert');
+          document.querySelector('#df-a5d65bdb-c13b-4de5-b308-2e3c5bb40ef9 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-ba65b1dc-427f-4830-9b1f-fe2405a2f156');
+          const element = document.querySelector('#df-a5d65bdb-c13b-4de5-b308-2e3c5bb40ef9');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -619,7 +631,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-34b94a6f-a685-47a6-8838-4e78b0f0ef76">
+  <div id="df-e574ad30-97bc-4abd-b60b-c111bff01ed0">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -714,7 +726,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-34b94a6f-a685-47a6-8838-4e78b0f0ef76')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-e574ad30-97bc-4abd-b60b-c111bff01ed0')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -765,12 +777,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-34b94a6f-a685-47a6-8838-4e78b0f0ef76 button.colab-df-convert');
+          document.querySelector('#df-e574ad30-97bc-4abd-b60b-c111bff01ed0 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-34b94a6f-a685-47a6-8838-4e78b0f0ef76');
+          const element = document.querySelector('#df-e574ad30-97bc-4abd-b60b-c111bff01ed0');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -955,7 +967,20 @@ title="Print to PDF"
 </div>
 </section>
 <section id="metode-decision-tree">
-<h1>Metode Decision Tree<a class="headerlink" href="#metode-decision-tree" title="Permalink to this headline">#</a></h1>
+<h2>Metode Decision Tree<a class="headerlink" href="#metode-decision-tree" title="Permalink to this headline">#</a></h2>
+<p><strong>Pengertian Decision Tree</strong></p>
+<p>Decision Tree (Pohon keputusan) adalah jenis pembelajaran mesin terawasi(supervise) yang digunakan untuk mengkategorikan atau membuat prediksi berdasarkan bagaimana serangkaian pertanyaan sebelumnya dijawab.
+Supervise artinya model dilatih dan diuji pada sekumpulan data yang berisi kategorisasi yang diinginkan.</p>
+<p><strong>Jenis Decision Tree</strong></p>
+<p>Ada dua jenis utama pohon keputusan berdasarkan variabel sasaran, yaitu pohon keputusan variabel kategorikal dan pohon keputusan variabel kontinu.</p>
+<ol class="simple">
+<li><p>Pohon keputusan variabel kategori
+Sebuah pohon keputusan variabel kategoris termasuk variabel target kategoris dibagi ke dalam kategori. Misalnya, kategori bisa ya atau tidak. Kategori berarti bahwa setiap tahap proses pengambilan keputusan termasuk dalam salah satu kategori ini, dan tidak ada di antaranya.</p></li>
+<li><p>Pohon keputusan variabel kontinu
+Pohon keputusan variabel kontinu adalah pohon keputusan dengan variabel target kontinu. Misalnya, pendapatan individu yang pendapatannya tidak diketahui dapat diprediksi berdasarkan informasi yang tersedia seperti pekerjaan, usia, dan variabel kontinu lainnya.</p></li>
+</ol>
+<p><strong>Rumus Gini Index</strong>
+$<span class="math notranslate nohighlight">\( Gini Index = 1-Σ_i^n (P_i)^2 \)</span>$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import library Scikit Learn untuk Decision Tree, Dataset dan Matlotlib</span>
@@ -983,7 +1008,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-abea5455-f472-491c-8709-430bcaddf13a">
+  <div id="df-b6178592-74e4-424e-a63a-742ab187ed38">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1084,7 +1109,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-abea5455-f472-491c-8709-430bcaddf13a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-b6178592-74e4-424e-a63a-742ab187ed38')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1135,12 +1160,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-abea5455-f472-491c-8709-430bcaddf13a button.colab-df-convert');
+          document.querySelector('#df-b6178592-74e4-424e-a63a-742ab187ed38 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-abea5455-f472-491c-8709-430bcaddf13a');
+          const element = document.querySelector('#df-b6178592-74e4-424e-a63a-742ab187ed38');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1172,7 +1197,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-53651c01-04da-41a3-9240-581408e57188">
+  <div id="df-3332e55e-c1cc-4704-8e30-4df8057d5fe1">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1267,7 +1292,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-53651c01-04da-41a3-9240-581408e57188')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3332e55e-c1cc-4704-8e30-4df8057d5fe1')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1318,12 +1343,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-53651c01-04da-41a3-9240-581408e57188 button.colab-df-convert');
+          document.querySelector('#df-3332e55e-c1cc-4704-8e30-4df8057d5fe1 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-53651c01-04da-41a3-9240-581408e57188');
+          const element = document.querySelector('#df-3332e55e-c1cc-4704-8e30-4df8057d5fe1');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1390,6 +1415,7 @@ title="Print to PDF"
 <img alt="_images/UTS_24_0.png" src="_images/UTS_24_0.png" />
 </div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
