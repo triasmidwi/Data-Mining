@@ -126,6 +126,11 @@ const thebe_selector_output = ".output, .cell_output"
    UTS
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Preprocessing%20Data%20Using%20MinmaxScaler%20%28Tugas%208%29.html">
+   Naive Bayes Classifier
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -350,160 +355,153 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Tugas Data Mining
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mengukur-jarak-tugas-1">
+   Mengukur jarak (TUGAS 1)
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mengukur-jarak-tugas-1">
-     Mengukur jarak (TUGAS 1)
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#categorical-nominal">
+     Categorical/Nominal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#change-values-to-1-0">
+     Change Values to 1/0
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Change Values to 1/0
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dissimilarity-binary-assymetric-value-formula">
+     Dissimilarity Binary Assymetric Value Formula
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diskritisasi-tugas-2">
+   Diskritisasi (TUGAS 2)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#approaches-to-discretization-pendekatan-diskritisasi">
+     Approaches to Discretization (Pendekatan Diskritisasi
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cut">
+     Cut
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#categorical-nominal">
-       Categorical/Nominal
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sepal-width">
+       Sepal Width
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#change-values-to-1-0">
-       Change Values to 1/0
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#petal-width">
+       Petal Width
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Change Values to 1/0
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sepal-length">
+       Sepal Length
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dissimilarity-binary-assymetric-value-formula">
-       Dissimilarity Binary Assymetric Value Formula
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#petal-length">
+       Petal Length
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diskritisasi-tugas-2">
-     Diskritisasi (TUGAS 2)
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#qcut">
+     Qcut
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#approaches-to-discretization-pendekatan-diskritisasi">
-       Approaches to Discretization (Pendekatan Diskritisasi
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Sepal Width
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cut">
-       Cut
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Petal Width
       </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#sepal-width">
-         Sepal Width
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#petal-width">
-         Petal Width
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#sepal-length">
-         Sepal Length
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#petal-length">
-         Petal Length
-        </a>
-       </li>
-      </ul>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#qcut">
-       Qcut
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Sepal Length
       </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id2">
-         Sepal Width
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id3">
-         Petal Width
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id4">
-         Sepal Length
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id5">
-         Petal Length
-        </a>
-       </li>
-      </ul>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#definisi-entropy-based-binning">
-       Definisi Entropy-based Binning
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Petal Length
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definisi-entropy-based-binning">
+     Definisi Entropy-based Binning
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#persiapan">
+       Persiapan
       </a>
       <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#persiapan">
-         Persiapan
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#functions">
+         Functions
         </a>
         <ul class="nav section-nav flex-column">
-         <li class="toc-h5 nav-item toc-entry">
-          <a class="reference internal nav-link" href="#functions">
-           Functions
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#fungsi-menghitung-banyaknya-data-setiap-kategori">
+           Fungsi menghitung banyaknya data setiap kategori
           </a>
-          <ul class="nav section-nav flex-column">
-           <li class="toc-h6 nav-item toc-entry">
-            <a class="reference internal nav-link" href="#fungsi-menghitung-banyaknya-data-setiap-kategori">
-             Fungsi menghitung banyaknya data setiap kategori
-            </a>
-           </li>
-           <li class="toc-h6 nav-item toc-entry">
-            <a class="reference internal nav-link" href="#fungsi-menghitung-banyaknya-data-setiap-kategori-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan">
-             Fungsi menghitung banyaknya data setiap kategori berdasarkan nilai pembagi atau
-             <em>
-              split value
-             </em>
-             yang diberikan
-            </a>
-           </li>
-           <li class="toc-h6 nav-item toc-entry">
-            <a class="reference internal nav-link" href="#fungsi-menghitung-perbedaan-gain-antara-entropi-inisial-dengan-entropi-nilai-pembagi-yang-diberikan">
-             Fungsi menghitung perbedaan
-             <em>
-              gain
-             </em>
-             antara entropi inisial dengan entropi nilai pembagi yang diberikan
-            </a>
-           </li>
-           <li class="toc-h6 nav-item toc-entry">
-            <a class="reference internal nav-link" href="#fungsi-menghitung-entropy">
-             Fungsi menghitung entropy
-            </a>
-           </li>
-           <li class="toc-h6 nav-item toc-entry">
-            <a class="reference internal nav-link" href="#fungsi-menghitung-info-entropy-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan">
-             Fungsi menghitung Info entropy berdasarkan nilai pembagi atau
-             <em>
-              split value
-             </em>
-             yang diberikan
-            </a>
-           </li>
-           <li class="toc-h6 nav-item toc-entry">
-            <a class="reference internal nav-link" href="#implementasi">
-             Implementasi
-            </a>
-           </li>
-          </ul>
+         </li>
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#fungsi-menghitung-banyaknya-data-setiap-kategori-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan">
+           Fungsi menghitung banyaknya data setiap kategori berdasarkan nilai pembagi atau
+           <em>
+            split value
+           </em>
+           yang diberikan
+          </a>
+         </li>
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#fungsi-menghitung-perbedaan-gain-antara-entropi-inisial-dengan-entropi-nilai-pembagi-yang-diberikan">
+           Fungsi menghitung perbedaan
+           <em>
+            gain
+           </em>
+           antara entropi inisial dengan entropi nilai pembagi yang diberikan
+          </a>
+         </li>
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#fungsi-menghitung-entropy">
+           Fungsi menghitung entropy
+          </a>
+         </li>
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#fungsi-menghitung-info-entropy-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan">
+           Fungsi menghitung Info entropy berdasarkan nilai pembagi atau
+           <em>
+            split value
+           </em>
+           yang diberikan
+          </a>
+         </li>
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#implementasi">
+           Implementasi
+          </a>
          </li>
         </ul>
        </li>
@@ -511,39 +509,37 @@ title="Print to PDF"
      </li>
     </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#implementasi-k-nn-pada-dataset-iris-tugas-3">
-     Implementasi K-NN pada dataset iris (TUGAS 3)
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#gaussian-naive-bayes-tugas-4">
-     Gaussian Naive Bayes (TUGAS 4)
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#k-means-clustering-tugas-5">
-     K-Means Clustering (Tugas 5)
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#decision-tree-classifier-tugas-6">
-     Decision Tree Classifier (Tugas 6)
-    </a>
-   </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementasi-k-nn-pada-dataset-iris-tugas-3">
+   Implementasi K-NN pada dataset iris (TUGAS 3)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gaussian-naive-bayes-tugas-4">
+   Gaussian Naive Bayes (TUGAS 4)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#k-means-clustering-tugas-5">
+   K-Means Clustering (Tugas 5)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#decision-tree-classifier-tugas-6">
+   Decision Tree Classifier (Tugas 6)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tugas-7">
    Tugas 7
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#menggunakan-metode-naive-bayes">
-     Menggunakan Metode Naive Bayes
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menggunakan-metode-naive-bayes">
+   Menggunakan Metode Naive Bayes
+  </a>
  </li>
 </ul>
 
@@ -564,160 +560,153 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Tugas Data Mining
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mengukur-jarak-tugas-1">
+   Mengukur jarak (TUGAS 1)
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mengukur-jarak-tugas-1">
-     Mengukur jarak (TUGAS 1)
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#categorical-nominal">
+     Categorical/Nominal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#change-values-to-1-0">
+     Change Values to 1/0
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Change Values to 1/0
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dissimilarity-binary-assymetric-value-formula">
+     Dissimilarity Binary Assymetric Value Formula
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diskritisasi-tugas-2">
+   Diskritisasi (TUGAS 2)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#approaches-to-discretization-pendekatan-diskritisasi">
+     Approaches to Discretization (Pendekatan Diskritisasi
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cut">
+     Cut
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#categorical-nominal">
-       Categorical/Nominal
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sepal-width">
+       Sepal Width
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#change-values-to-1-0">
-       Change Values to 1/0
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#petal-width">
+       Petal Width
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Change Values to 1/0
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sepal-length">
+       Sepal Length
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dissimilarity-binary-assymetric-value-formula">
-       Dissimilarity Binary Assymetric Value Formula
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#petal-length">
+       Petal Length
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diskritisasi-tugas-2">
-     Diskritisasi (TUGAS 2)
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#qcut">
+     Qcut
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#approaches-to-discretization-pendekatan-diskritisasi">
-       Approaches to Discretization (Pendekatan Diskritisasi
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Sepal Width
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cut">
-       Cut
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Petal Width
       </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#sepal-width">
-         Sepal Width
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#petal-width">
-         Petal Width
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#sepal-length">
-         Sepal Length
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#petal-length">
-         Petal Length
-        </a>
-       </li>
-      </ul>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#qcut">
-       Qcut
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       Sepal Length
       </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id2">
-         Sepal Width
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id3">
-         Petal Width
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id4">
-         Sepal Length
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id5">
-         Petal Length
-        </a>
-       </li>
-      </ul>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#definisi-entropy-based-binning">
-       Definisi Entropy-based Binning
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Petal Length
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definisi-entropy-based-binning">
+     Definisi Entropy-based Binning
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#persiapan">
+       Persiapan
       </a>
       <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#persiapan">
-         Persiapan
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#functions">
+         Functions
         </a>
         <ul class="nav section-nav flex-column">
-         <li class="toc-h5 nav-item toc-entry">
-          <a class="reference internal nav-link" href="#functions">
-           Functions
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#fungsi-menghitung-banyaknya-data-setiap-kategori">
+           Fungsi menghitung banyaknya data setiap kategori
           </a>
-          <ul class="nav section-nav flex-column">
-           <li class="toc-h6 nav-item toc-entry">
-            <a class="reference internal nav-link" href="#fungsi-menghitung-banyaknya-data-setiap-kategori">
-             Fungsi menghitung banyaknya data setiap kategori
-            </a>
-           </li>
-           <li class="toc-h6 nav-item toc-entry">
-            <a class="reference internal nav-link" href="#fungsi-menghitung-banyaknya-data-setiap-kategori-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan">
-             Fungsi menghitung banyaknya data setiap kategori berdasarkan nilai pembagi atau
-             <em>
-              split value
-             </em>
-             yang diberikan
-            </a>
-           </li>
-           <li class="toc-h6 nav-item toc-entry">
-            <a class="reference internal nav-link" href="#fungsi-menghitung-perbedaan-gain-antara-entropi-inisial-dengan-entropi-nilai-pembagi-yang-diberikan">
-             Fungsi menghitung perbedaan
-             <em>
-              gain
-             </em>
-             antara entropi inisial dengan entropi nilai pembagi yang diberikan
-            </a>
-           </li>
-           <li class="toc-h6 nav-item toc-entry">
-            <a class="reference internal nav-link" href="#fungsi-menghitung-entropy">
-             Fungsi menghitung entropy
-            </a>
-           </li>
-           <li class="toc-h6 nav-item toc-entry">
-            <a class="reference internal nav-link" href="#fungsi-menghitung-info-entropy-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan">
-             Fungsi menghitung Info entropy berdasarkan nilai pembagi atau
-             <em>
-              split value
-             </em>
-             yang diberikan
-            </a>
-           </li>
-           <li class="toc-h6 nav-item toc-entry">
-            <a class="reference internal nav-link" href="#implementasi">
-             Implementasi
-            </a>
-           </li>
-          </ul>
+         </li>
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#fungsi-menghitung-banyaknya-data-setiap-kategori-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan">
+           Fungsi menghitung banyaknya data setiap kategori berdasarkan nilai pembagi atau
+           <em>
+            split value
+           </em>
+           yang diberikan
+          </a>
+         </li>
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#fungsi-menghitung-perbedaan-gain-antara-entropi-inisial-dengan-entropi-nilai-pembagi-yang-diberikan">
+           Fungsi menghitung perbedaan
+           <em>
+            gain
+           </em>
+           antara entropi inisial dengan entropi nilai pembagi yang diberikan
+          </a>
+         </li>
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#fungsi-menghitung-entropy">
+           Fungsi menghitung entropy
+          </a>
+         </li>
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#fungsi-menghitung-info-entropy-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan">
+           Fungsi menghitung Info entropy berdasarkan nilai pembagi atau
+           <em>
+            split value
+           </em>
+           yang diberikan
+          </a>
+         </li>
+         <li class="toc-h6 nav-item toc-entry">
+          <a class="reference internal nav-link" href="#implementasi">
+           Implementasi
+          </a>
          </li>
         </ul>
        </li>
@@ -725,39 +714,37 @@ title="Print to PDF"
      </li>
     </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#implementasi-k-nn-pada-dataset-iris-tugas-3">
-     Implementasi K-NN pada dataset iris (TUGAS 3)
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#gaussian-naive-bayes-tugas-4">
-     Gaussian Naive Bayes (TUGAS 4)
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#k-means-clustering-tugas-5">
-     K-Means Clustering (Tugas 5)
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#decision-tree-classifier-tugas-6">
-     Decision Tree Classifier (Tugas 6)
-    </a>
-   </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementasi-k-nn-pada-dataset-iris-tugas-3">
+   Implementasi K-NN pada dataset iris (TUGAS 3)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gaussian-naive-bayes-tugas-4">
+   Gaussian Naive Bayes (TUGAS 4)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#k-means-clustering-tugas-5">
+   K-Means Clustering (Tugas 5)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#decision-tree-classifier-tugas-6">
+   Decision Tree Classifier (Tugas 6)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tugas-7">
    Tugas 7
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#menggunakan-metode-naive-bayes">
-     Menggunakan Metode Naive Bayes
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menggunakan-metode-naive-bayes">
+   Menggunakan Metode Naive Bayes
+  </a>
  </li>
 </ul>
 
@@ -6371,9 +6358,9 @@ $<span class="math notranslate nohighlight">\( Gini Index = 1-Σ_i^n (P_i)^2 \)<
 </div>
 </div>
 </section>
+<section id="tugas-7">
+<h2>Tugas 7<a class="headerlink" href="#tugas-7" title="Permalink to this headline">#</a></h2>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="tugas-7">
-<h1>Tugas 7<a class="headerlink" href="#tugas-7" title="Permalink to this headline">#</a></h1>
 <section id="menggunakan-metode-naive-bayes">
 <h2>Menggunakan Metode Naive Bayes<a class="headerlink" href="#menggunakan-metode-naive-bayes" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
