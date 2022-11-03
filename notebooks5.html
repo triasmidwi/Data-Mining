@@ -1,0 +1,873 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>K-Means Clustering (Tugas 5) &#8212; Triasmi Dwi Farawati</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Decision Tree Classifier (Tugas 6)" href="notebooks6.html" />
+    <link rel="prev" title="UTS" href="UTS.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Triasmi Dwi Farawati</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks.html">
+   Tugas Data Mining
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks2.html">
+   Diskritisasi (TUGAS 2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks3.html">
+   Implementasi K-NN pada dataset iris (TUGAS 3)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks4.html">
+   Gaussian Naive Bayes (TUGAS 4)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="UTS.html">
+   UTS
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   K-Means Clustering (Tugas 5)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks6.html">
+   Decision Tree Classifier (Tugas 6)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks7.html">
+   Tugas 7
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks8.html">
+   Tugas 9
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks9.html">
+   Studi Kasus : Kredit Score
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/triasmidwi/datamining/gh-pages?urlpath=tree/_sources/notebooks5.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/triasmidwi/datamining/blob/gh-pages/_sources/notebooks5.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/triasmidwi/datamining"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/triasmidwi/datamining/issues/new?title=Issue%20on%20page%20%2Fnotebooks5.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/notebooks5.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>K-Means Clustering (Tugas 5)</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="k-means-clustering-tugas-5">
+<h1>K-Means Clustering (Tugas 5)<a class="headerlink" href="#k-means-clustering-tugas-5" title="Permalink to this headline">#</a></h1>
+<p><strong>Definisi</strong></p>
+<p>K-means merupakan salah satu algoritma yang bersifat unsupervised learning. K-Means memiliki fungsi untuk mengelompokkan data kedalam data cluster. Algoritma ini dapat menerima data tanpa ada label kategori. K-Means Clustering Algoritma juga merupakan metode non-hierarchy. Metode Clustering Algoritma adalah mengelompokkan beberapa data ke dalam kelompok yang menjelaskan data dalam satu kelompok memiliki karakteristik yang sama dan memiliki karakteristik yang berbeda dengan data yang ada di kelompok lain. Cluster Sampling adalah teknik pengambilan sampel di mana unit-unit populasi dipilih secara acak dari kelompok yang sudah ada yang disebut ‘cluster, nah Clustering atau klasterisasi adalah salah satu masalah yang menggunakan teknik unsupervised learning.</p>
+<p>K-Means Clustering adalah suatu metode penganalisaan data atau metode Data Mining yang melakukan proses pemodelan unssupervised learning dan menggunakan metode yang mengelompokan data berbagai partisi.</p>
+<p>K Means Clustering memiliki objective yaitu meminimalisasi object function yang telah di atur pada proses clasterisasi. Dengan cara minimalisasi variasi antar 1 cluster dengan maksimalisasi variasi dengan data di cluster lainnya.</p>
+<p><strong>Algoritma K-means clustering</strong></p>
+<p>Menentukan jumlah cluster</p>
+<ol class="simple">
+<li><p>Secara acak mendistribusikan data cluster</p></li>
+<li><p>Menghitung rata rata dari data yang ada di cluster.</p></li>
+<li><p>Menggunakan langkah baris 3 kembali sesuai nilai treshold</p></li>
+<li><p>Menghitung jarak antara data dan nilai centroid(K means clustering)</p></li>
+<li><p>Distance space dapat diimplementasikan untuk menghitung jarak data dan centroid. Contoh penghitungan jarak yang sering digunakan adalah manhattan/city blok distance</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># linear algebra</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1"># data processing, CSV file I/O (e.g. pd.read_csv)</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/triasmidwi/dataset/main/Iris.csv&#39;</span>
+<span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sepal-length&#39;</span><span class="p">,</span><span class="s1">&#39;sepal-width&#39;</span><span class="p">,</span><span class="s1">&#39;petal-length&#39;</span><span class="p">,</span><span class="s1">&#39;petal-width&#39;</span><span class="p">,</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;Id&#39;</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">values</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">values</span><span class="p">[:,</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">preprocessing</span>
+<span class="n">le</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">LabelEncoder</span><span class="p">()</span>
+<span class="n">label</span> <span class="o">=</span> <span class="n">le</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">label</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dfkelas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">x_new</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_new</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-2.68420713,  0.32660731],
+       [-2.71539062, -0.16955685],
+       [-2.88981954, -0.13734561],
+       [-2.7464372 , -0.31112432],
+       [-2.72859298,  0.33392456],
+       [-2.27989736,  0.74778271],
+       [-2.82089068, -0.08210451],
+       [-2.62648199,  0.17040535],
+       [-2.88795857, -0.57079803],
+       [-2.67384469, -0.1066917 ],
+       [-2.50652679,  0.65193501],
+       [-2.61314272,  0.02152063],
+       [-2.78743398, -0.22774019],
+       [-3.22520045, -0.50327991],
+       [-2.64354322,  1.1861949 ],
+       [-2.38386932,  1.34475434],
+       [-2.6225262 ,  0.81808967],
+       [-2.64832273,  0.31913667],
+       [-2.19907796,  0.87924409],
+       [-2.58734619,  0.52047364],
+       [-2.3105317 ,  0.39786782],
+       [-2.54323491,  0.44003175],
+       [-3.21585769,  0.14161557],
+       [-2.30312854,  0.10552268],
+       [-2.35617109, -0.03120959],
+       [-2.50791723, -0.13905634],
+       [-2.469056  ,  0.13788731],
+       [-2.56239095,  0.37468456],
+       [-2.63982127,  0.31929007],
+       [-2.63284791, -0.19007583],
+       [-2.58846205, -0.19739308],
+       [-2.41007734,  0.41808001],
+       [-2.64763667,  0.81998263],
+       [-2.59715948,  1.10002193],
+       [-2.67384469, -0.1066917 ],
+       [-2.86699985,  0.0771931 ],
+       [-2.62522846,  0.60680001],
+       [-2.67384469, -0.1066917 ],
+       [-2.98184266, -0.48025005],
+       [-2.59032303,  0.23605934],
+       [-2.77013891,  0.27105942],
+       [-2.85221108, -0.93286537],
+       [-2.99829644, -0.33430757],
+       [-2.4055141 ,  0.19591726],
+       [-2.20883295,  0.44269603],
+       [-2.71566519, -0.24268148],
+       [-2.53757337,  0.51036755],
+       [-2.8403213 , -0.22057634],
+       [-2.54268576,  0.58628103],
+       [-2.70391231,  0.11501085],
+       [ 1.28479459,  0.68543919],
+       [ 0.93241075,  0.31919809],
+       [ 1.46406132,  0.50418983],
+       [ 0.18096721, -0.82560394],
+       [ 1.08713449,  0.07539039],
+       [ 0.64043675, -0.41732348],
+       [ 1.09522371,  0.28389121],
+       [-0.75146714, -1.00110751],
+       [ 1.04329778,  0.22895691],
+       [-0.01019007, -0.72057487],
+       [-0.5110862 , -1.26249195],
+       [ 0.51109806, -0.10228411],
+       [ 0.26233576, -0.5478933 ],
+       [ 0.98404455, -0.12436042],
+       [-0.174864  , -0.25181557],
+       [ 0.92757294,  0.46823621],
+       [ 0.65959279, -0.35197629],
+       [ 0.23454059, -0.33192183],
+       [ 0.94236171, -0.54182226],
+       [ 0.0432464 , -0.58148945],
+       [ 1.11624072, -0.08421401],
+       [ 0.35678657, -0.06682383],
+       [ 1.29646885, -0.32756152],
+       [ 0.92050265, -0.18239036],
+       [ 0.71400821,  0.15037915],
+       [ 0.89964086,  0.32961098],
+       [ 1.33104142,  0.24466952],
+       [ 1.55739627,  0.26739258],
+       [ 0.81245555, -0.16233157],
+       [-0.30733476, -0.36508661],
+       [-0.07034289, -0.70253793],
+       [-0.19188449, -0.67749054],
+       [ 0.13499495, -0.31170964],
+       [ 1.37873698, -0.42120514],
+       [ 0.58727485, -0.48328427],
+       [ 0.8072055 ,  0.19505396],
+       [ 1.22042897,  0.40803534],
+       [ 0.81286779, -0.370679  ],
+       [ 0.24519516, -0.26672804],
+       [ 0.16451343, -0.67966147],
+       [ 0.46303099, -0.66952655],
+       [ 0.89016045, -0.03381244],
+       [ 0.22887905, -0.40225762],
+       [-0.70708128, -1.00842476],
+       [ 0.35553304, -0.50321849],
+       [ 0.33112695, -0.21118014],
+       [ 0.37523823, -0.29162202],
+       [ 0.64169028,  0.01907118],
+       [-0.90846333, -0.75156873],
+       [ 0.29780791, -0.34701652],
+       [ 2.53172698, -0.01184224],
+       [ 1.41407223, -0.57492506],
+       [ 2.61648461,  0.34193529],
+       [ 1.97081495, -0.18112569],
+       [ 2.34975798, -0.04188255],
+       [ 3.39687992,  0.54716805],
+       [ 0.51938325, -1.19135169],
+       [ 2.9320051 ,  0.35237701],
+       [ 2.31967279, -0.24554817],
+       [ 2.91813423,  0.78038063],
+       [ 1.66193495,  0.2420384 ],
+       [ 1.80234045, -0.21615461],
+       [ 2.16537886,  0.21528028],
+       [ 1.34459422, -0.77641543],
+       [ 1.5852673 , -0.53930705],
+       [ 1.90474358,  0.11881899],
+       [ 1.94924878,  0.04073026],
+       [ 3.48876538,  1.17154454],
+       [ 3.79468686,  0.25326557],
+       [ 1.29832982, -0.76101394],
+       [ 2.42816726,  0.37678197],
+       [ 1.19809737, -0.60557896],
+       [ 3.49926548,  0.45677347],
+       [ 1.38766825, -0.20403099],
+       [ 2.27585365,  0.33338653],
+       [ 2.61419383,  0.55836695],
+       [ 1.25762518, -0.179137  ],
+       [ 1.29066965, -0.11642525],
+       [ 2.12285398, -0.21085488],
+       [ 2.3875644 ,  0.46251925],
+       [ 2.84096093,  0.37274259],
+       [ 3.2323429 ,  1.37052404],
+       [ 2.15873837, -0.21832553],
+       [ 1.4431026 , -0.14380129],
+       [ 1.77964011, -0.50146479],
+       [ 3.07652162,  0.68576444],
+       [ 2.14498686,  0.13890661],
+       [ 1.90486293,  0.04804751],
+       [ 1.16885347, -0.1645025 ],
+       [ 2.10765373,  0.37148225],
+       [ 2.31430339,  0.18260885],
+       [ 1.92245088,  0.40927118],
+       [ 1.41407223, -0.57492506],
+       [ 2.56332271,  0.2759745 ],
+       [ 2.41939122,  0.30350394],
+       [ 1.94401705,  0.18741522],
+       [ 1.52566363, -0.37502085],
+       [ 1.76404594,  0.07851919],
+       [ 1.90162908,  0.11587675],
+       [ 1.38966613, -0.28288671]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+<span class="c1">#number of cluster</span>
+<span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1">#fitting the input data</span>
+<span class="n">kmeans</span><span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_new</span><span class="p">)</span>
+<span class="c1">#getting the clusters  labels</span>
+<span class="n">prediksi</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_new</span><span class="p">)</span>
+<span class="c1">#centroids values</span>
+<span class="n">centroids</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">centroids</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0.66443351, -0.33029221],
+       [ 2.34645113,  0.27235455],
+       [-2.64084076,  0.19051995]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_new</span><span class="p">[:,</span><span class="mi">1</span><span class="p">:</span><span class="mi">12</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(150, 1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">unique</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">where</span> 
+<span class="n">yhat</span> <span class="o">=</span> <span class="n">unique</span><span class="p">(</span><span class="n">prediksi</span><span class="p">)</span>
+<span class="n">clusters</span> <span class="o">=</span> <span class="n">unique</span><span class="p">(</span><span class="n">yhat</span><span class="p">)</span>
+<span class="c1">#create scatter plot for samples from each cluster</span>
+<span class="k">for</span> <span class="n">cluster</span> <span class="ow">in</span> <span class="n">clusters</span><span class="p">:</span>
+  <span class="c1">#get row indexes for samples with this cluster</span>
+  <span class="n">row_ix</span> <span class="o">=</span> <span class="n">where</span> <span class="p">(</span><span class="n">yhat</span> <span class="o">==</span> <span class="n">cluster</span><span class="p">)</span>
+  <span class="c1">#create scatter of these samples</span>
+  <span class="n">pyplot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_new</span><span class="p">[</span><span class="n">row_ix</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">x_new</span><span class="p">[</span><span class="n">row_ix</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="c1">#show the plot</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/notebooks5_14_0.png" src="_images/notebooks5_14_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">prediksi</span>
+<span class="n">mapping</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">mapping</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">a</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prediksi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">prediksi</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+       2, 2, 2, 2, 2, 2, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0,
+       0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0,
+       0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">label</span><span class="p">,</span><span class="n">prediksi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.31333333333333335
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">x_new</span><span class="p">[</span><span class="n">row_ix</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numpy.ndarray
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_new</span><span class="p">[</span><span class="n">row_ix</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-2.88981954]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="n">row_ix</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[3.2]], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">yhat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 1, 2], dtype=int32)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="UTS.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">UTS</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="notebooks6.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Decision Tree Classifier (Tugas 6)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By triasmi<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

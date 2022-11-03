@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Tugas 9 &#8212; Triasmi Dwi Farawati</title>
+    <title>Tugas 7 &#8212; Triasmi Dwi Farawati</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Studi Kasus : Kredit Score" href="notebooks9.html" />
-    <link rel="prev" title="Tugas 7" href="notebooks7.html" />
+    <link rel="next" title="Tugas 9" href="notebooks8.html" />
+    <link rel="prev" title="Decision Tree Classifier (Tugas 6)" href="notebooks6.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -149,13 +149,13 @@ const thebe_selector_output = ".output, .cell_output"
    Decision Tree Classifier (Tugas 6)
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="notebooks7.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Tugas 7
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks8.html">
    Tugas 9
   </a>
  </li>
@@ -223,7 +223,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/triasmidwi/datamining/gh-pages?urlpath=tree/_sources/notebooks8.ipynb"
+        <a href="https://mybinder.org/v2/gh/triasmidwi/datamining/gh-pages?urlpath=tree/_sources/notebooks7.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -241,7 +241,7 @@ title="Launch on Binder"
       </li>
       
       <li>
-        <a href="https://colab.research.google.com/github/triasmidwi/datamining/blob/gh-pages/_sources/notebooks8.ipynb"
+        <a href="https://colab.research.google.com/github/triasmidwi/datamining/blob/gh-pages/_sources/notebooks7.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -301,7 +301,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/triasmidwi/datamining/issues/new?title=Issue%20on%20page%20%2Fnotebooks8.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/triasmidwi/datamining/issues/new?title=Issue%20on%20page%20%2Fnotebooks7.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -329,7 +329,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/notebooks8.ipynb"
+        <a href="_sources/notebooks7.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -366,23 +366,60 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menggunakan-metode-naive-bayes">
+   Menggunakan Metode Naive Bayes
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Tugas 9</h1>
+                <h1>Tugas 7</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#menggunakan-metode-naive-bayes">
+   Menggunakan Metode Naive Bayes
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -390,25 +427,74 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-9">
-<h1>Tugas 9<a class="headerlink" href="#tugas-9" title="Permalink to this headline">#</a></h1>
+  <section id="tugas-7">
+<h1>Tugas 7<a class="headerlink" href="#tugas-7" title="Permalink to this headline">#</a></h1>
+<section id="menggunakan-metode-naive-bayes">
+<h2>Menggunakan Metode Naive Bayes<a class="headerlink" href="#menggunakan-metode-naive-bayes" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Import the packages</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
-<span class="c1"># mengakses data </span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">set_option</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Import the package</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span> 
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span> 
+<span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">RFE</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">KFold</span> 
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">GridSearchCV</span> 
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">RandomizedSearchCV</span>  
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span> 
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span> 
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">import</span> <span class="nn">xgboost</span> <span class="k">as</span> <span class="nn">xgb</span>
+<span class="kn">from</span> <span class="nn">xgboost</span> <span class="kn">import</span> <span class="n">XGBClassifier</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import the package</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span> 
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">ExtraTreesClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">SelectFromModel</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span> 
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># mengakses data </span>
 <span class="n">dataset_url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/triasmidwi/dataset/main/credit_score.csv&quot;</span>
 <span class="c1"># membaca data</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">dataset_url</span><span class="p">)</span>
+<span class="n">data_credit</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">dataset_url</span><span class="p">)</span>
 <span class="c1">#menampilkan data</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">data_credit</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-7ac44779-04d3-456a-96ee-79048cdcd140">
+  <div id="df-f4b327ef-493b-496d-b2eb-ea0b126ef193">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -497,7 +583,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-7ac44779-04d3-456a-96ee-79048cdcd140')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f4b327ef-493b-496d-b2eb-ea0b126ef193')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -548,12 +634,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-7ac44779-04d3-456a-96ee-79048cdcd140 button.colab-df-convert');
+          document.querySelector('#df-f4b327ef-493b-496d-b2eb-ea0b126ef193 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-7ac44779-04d3-456a-96ee-79048cdcd140');
+          const element = document.querySelector('#df-f4b327ef-493b-496d-b2eb-ea0b126ef193');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -577,7 +663,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#menampilkan info data berserta tipenya</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data_credit</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -606,13 +692,13 @@ None
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#melakukan drop kolom pada kolom yang unnamed</span>
-<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">data_credit</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">data_credit</span><span class="o">.</span><span class="n">columns</span><span class="p">[[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-30d5ecbb-5516-4ade-9aa2-47552ef5911a">
+  <div id="df-9d85a2b3-c2c1-4acd-a6c5-1eeb51c5e0f4">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -756,7 +842,7 @@ None
 </table>
 <p>900 rows × 7 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-30d5ecbb-5516-4ade-9aa2-47552ef5911a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-9d85a2b3-c2c1-4acd-a6c5-1eeb51c5e0f4')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -807,12 +893,12 @@ None
 
       <script>
         const buttonEl =
-          document.querySelector('#df-30d5ecbb-5516-4ade-9aa2-47552ef5911a button.colab-df-convert');
+          document.querySelector('#df-9d85a2b3-c2c1-4acd-a6c5-1eeb51c5e0f4 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-30d5ecbb-5516-4ade-9aa2-47552ef5911a');
+          const element = document.querySelector('#df-9d85a2b3-c2c1-4acd-a6c5-1eeb51c5e0f4');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -838,8 +924,8 @@ None
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># membuat var x, y untuk melakukan split data</span>
 <span class="c1"># var x, kecuali kolom risk_rating</span>
 <span class="c1">#data_credit.drop(data_credit.columns[[0]], axis = 1, inplace = True)</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;risk_rating&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;risk_rating&#39;</span><span class="p">]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">data_credit</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;risk_rating&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data_credit</span><span class="p">[</span><span class="s1">&#39;risk_rating&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -921,29 +1007,25 @@ None
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save Model Using Pickle</span>
-<span class="kn">import</span> <span class="nn">pandas</span>
-<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">model_selection</span>
-<span class="kn">import</span> <span class="nn">pickle</span>
-<span class="c1"># save the model to disk</span>
-<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;finalized_model.sav&#39;</span>
-<span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">model_gnb</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">))</span>
- 
-<span class="c1"># some time later...</span>
- 
-<span class="c1"># load the model from disk</span>
-<span class="n">loaded_model</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">))</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">loaded_model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
+<span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Confusion Matrix&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cm</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Confusion Matrix
+[[69  0  0  0  0]
+ [ 0 49  0  0  0]
+ [ 0  0 84  0  0]
+ [ 0  0  0 36  0]
+ [ 0  0  0  0 32]]
 </pre></div>
 </div>
 </div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -973,17 +1055,17 @@ None
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="notebooks7.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="notebooks6.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Tugas 7</p>
+            <p class="prev-next-title">Decision Tree Classifier (Tugas 6)</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="notebooks9.html" title="next page">
+    <a class='right-next' id="next-link" href="notebooks8.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Studi Kasus : Kredit Score</p>
+        <p class="prev-next-title">Tugas 9</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
