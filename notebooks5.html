@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Decision Tree Classifier (Tugas 6)" href="notebooks6.html" />
-    <link rel="prev" title="UTS" href="UTS.html" />
+    <link rel="prev" title="Gaussian Naive Bayes (TUGAS 4)" href="notebooks4.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,7 +116,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="notebooks.html">
-   Tugas Data Mining
+   Mengukur jarak (TUGAS 1)
   </a>
  </li>
  <li class="toctree-l1">
@@ -134,11 +134,6 @@ const thebe_selector_output = ".output, .cell_output"
    Gaussian Naive Bayes (TUGAS 4)
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="UTS.html">
-   UTS
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    K-Means Clustering (Tugas 5)
@@ -150,18 +145,23 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="UTS.html">
+   UTS
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="notebooks7.html">
-   Tugas 7
+   Create Model SK : Kredit Score (Tugas 7)
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="notebooks8.html">
-   Tugas 9
+   Preprocessing Data SK : Kredit Score (Tugas 8)
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="notebooks9.html">
-   Studi Kasus : Kredit Score
+   Preprocessing Data Using MinMaxScaler (Tugas 9)
   </a>
  </li>
 </ul>
@@ -667,8 +667,8 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0.66443351, -0.33029221],
-       [ 2.34645113,  0.27235455],
-       [-2.64084076,  0.19051995]])
+       [-2.64084076,  0.19051995],
+       [ 2.34645113,  0.27235455]])
 </pre></div>
 </div>
 </div>
@@ -724,13 +724,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-       2, 2, 2, 2, 2, 2, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0,
-       0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0,
-       0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 2, 2, 2, 1, 2, 2, 2,
+       2, 2, 2, 1, 1, 2, 2, 2, 2, 1, 2, 1, 2, 1, 2, 2, 1, 1, 2, 2, 2, 2,
+       2, 1, 2, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2, 1])
 </pre></div>
 </div>
 </div>
@@ -749,7 +749,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.31333333333333335
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8866666666666667
 </pre></div>
 </div>
 </div>
@@ -831,11 +831,11 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="UTS.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="notebooks4.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">UTS</p>
+            <p class="prev-next-title">Gaussian Naive Bayes (TUGAS 4)</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="notebooks6.html" title="next page">
