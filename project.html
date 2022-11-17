@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Preprocessing Data SK : Kredit Score (Tugas 8) &#8212; Triasmi Dwi Farawati</title>
+    <title>Penerapan Konsep Ensemble Stacking (Tugas 10) &#8212; Triasmi Dwi Farawati</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Preprocessing Data Using MinMaxScaler (Tugas 9)" href="notebooks9.html" />
-    <link rel="prev" title="Create Model SK : Kredit Score (Tugas 7)" href="notebooks7.html" />
+    <link rel="prev" title="Penerapan Konsep Ensemble Stacking (Tugas 10)" href="notebooks10.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -154,8 +153,8 @@ const thebe_selector_output = ".output, .cell_output"
    Create Model SK : Kredit Score (Tugas 7)
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks8.html">
    Preprocessing Data SK : Kredit Score (Tugas 8)
   </a>
  </li>
@@ -169,8 +168,8 @@ const thebe_selector_output = ".output, .cell_output"
    Penerapan Konsep Ensemble Stacking (Tugas 10)
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="project.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Penerapan Konsep Ensemble Stacking (Tugas 10)
   </a>
  </li>
@@ -233,7 +232,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/triasmidwi/datamining/gh-pages?urlpath=tree/_sources/notebooks8.ipynb"
+        <a href="https://mybinder.org/v2/gh/triasmidwi/datamining/gh-pages?urlpath=tree/_sources/project.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -251,7 +250,7 @@ title="Launch on Binder"
       </li>
       
       <li>
-        <a href="https://colab.research.google.com/github/triasmidwi/datamining/blob/gh-pages/_sources/notebooks8.ipynb"
+        <a href="https://colab.research.google.com/github/triasmidwi/datamining/blob/gh-pages/_sources/project.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -311,7 +310,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/triasmidwi/datamining/issues/new?title=Issue%20on%20page%20%2Fnotebooks8.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/triasmidwi/datamining/issues/new?title=Issue%20on%20page%20%2Fproject.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -339,7 +338,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/notebooks8.ipynb"
+        <a href="_sources/project.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -399,16 +398,14 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#naive-bayes-classifier">
-   Naive Bayes Classifier
+  <a class="reference internal nav-link" href="#traning-model">
+   Traning model
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-modell-for-naive-bayes">
-     create modell for naive bayes
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#proses-data-dengan-model">
+   proses data dengan model
+  </a>
  </li>
 </ul>
 
@@ -419,7 +416,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Preprocessing Data SK : Kredit Score (Tugas 8)</h1>
+                <h1>Penerapan Konsep Ensemble Stacking (Tugas 10)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -430,16 +427,14 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#naive-bayes-classifier">
-   Naive Bayes Classifier
+  <a class="reference internal nav-link" href="#traning-model">
+   Traning model
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-modell-for-naive-bayes">
-     create modell for naive bayes
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#proses-data-dengan-model">
+   proses data dengan model
+  </a>
  </li>
 </ul>
 
@@ -451,8 +446,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="preprocessing-data-sk-kredit-score-tugas-8">
-<h1>Preprocessing Data SK : Kredit Score (Tugas 8)<a class="headerlink" href="#preprocessing-data-sk-kredit-score-tugas-8" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="penerapan-konsep-ensemble-stacking-tugas-10">
+<h1>Penerapan Konsep Ensemble Stacking (Tugas 10)<a class="headerlink" href="#penerapan-konsep-ensemble-stacking-tugas-10" title="Permalink to this headline">#</a></h1>
 <p>##Prepocessing Data</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -476,7 +471,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-289615ab-f131-44c0-8dc4-3a024e8acf77">
+  <div id="df-b4cf0712-d039-4ab0-8f21-341e75975376">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -565,7 +560,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-289615ab-f131-44c0-8dc4-3a024e8acf77')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-b4cf0712-d039-4ab0-8f21-341e75975376')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -616,12 +611,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-289615ab-f131-44c0-8dc4-3a024e8acf77 button.colab-df-convert');
+          document.querySelector('#df-b4cf0712-d039-4ab0-8f21-341e75975376 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-289615ab-f131-44c0-8dc4-3a024e8acf77');
+          const element = document.querySelector('#df-b4cf0712-d039-4ab0-8f21-341e75975376');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -652,7 +647,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-4f187be5-8543-4e1a-9c33-45b0ed44a562">
+  <div id="df-24fe26c7-fe66-4698-835b-419d98e212b8">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -699,7 +694,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-4f187be5-8543-4e1a-9c33-45b0ed44a562')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-24fe26c7-fe66-4698-835b-419d98e212b8')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -750,12 +745,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-4f187be5-8543-4e1a-9c33-45b0ed44a562 button.colab-df-convert');
+          document.querySelector('#df-24fe26c7-fe66-4698-835b-419d98e212b8 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-4f187be5-8543-4e1a-9c33-45b0ed44a562');
+          const element = document.querySelector('#df-24fe26c7-fe66-4698-835b-419d98e212b8');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -786,7 +781,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-51cb3ddd-aa81-4940-9909-c2783439db41">
+  <div id="df-9dd41769-4cd7-43ef-81c9-23429b3f7f22">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -851,7 +846,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-51cb3ddd-aa81-4940-9909-c2783439db41')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-9dd41769-4cd7-43ef-81c9-23429b3f7f22')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -902,12 +897,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-51cb3ddd-aa81-4940-9909-c2783439db41 button.colab-df-convert');
+          document.querySelector('#df-9dd41769-4cd7-43ef-81c9-23429b3f7f22 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-51cb3ddd-aa81-4940-9909-c2783439db41');
+          const element = document.querySelector('#df-9dd41769-4cd7-43ef-81c9-23429b3f7f22');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -938,7 +933,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-9c0096d9-31b5-4632-84cd-f77f56991488">
+  <div id="df-0b2b2f0b-be1f-4b7e-bdc9-337364a146d3">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1009,7 +1004,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-9c0096d9-31b5-4632-84cd-f77f56991488')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-0b2b2f0b-be1f-4b7e-bdc9-337364a146d3')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1060,12 +1055,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-9c0096d9-31b5-4632-84cd-f77f56991488 button.colab-df-convert');
+          document.querySelector('#df-0b2b2f0b-be1f-4b7e-bdc9-337364a146d3 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-9c0096d9-31b5-4632-84cd-f77f56991488');
+          const element = document.querySelector('#df-0b2b2f0b-be1f-4b7e-bdc9-337364a146d3');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1096,7 +1091,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c0a7e519-6b0c-4a86-9bb0-b99a0541b499">
+  <div id="df-540be1a6-3e71-4bbb-86a4-e54e90523a56">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1180,7 +1175,7 @@ title="Print to PDF"
 </table>
 <p>900 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-c0a7e519-6b0c-4a86-9bb0-b99a0541b499')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-540be1a6-3e71-4bbb-86a4-e54e90523a56')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1231,12 +1226,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-c0a7e519-6b0c-4a86-9bb0-b99a0541b499 button.colab-df-convert');
+          document.querySelector('#df-540be1a6-3e71-4bbb-86a4-e54e90523a56 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-c0a7e519-6b0c-4a86-9bb0-b99a0541b499');
+          const element = document.querySelector('#df-540be1a6-3e71-4bbb-86a4-e54e90523a56');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1267,7 +1262,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-55582d71-00fd-4b6e-87c8-293a02e05cf6">
+  <div id="df-695f428a-7c1e-44c3-8a76-1c8d5142b566">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1374,7 +1369,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-55582d71-00fd-4b6e-87c8-293a02e05cf6')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-695f428a-7c1e-44c3-8a76-1c8d5142b566')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1425,12 +1420,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-55582d71-00fd-4b6e-87c8-293a02e05cf6 button.colab-df-convert');
+          document.querySelector('#df-695f428a-7c1e-44c3-8a76-1c8d5142b566 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-55582d71-00fd-4b6e-87c8-293a02e05cf6');
+          const element = document.querySelector('#df-695f428a-7c1e-44c3-8a76-1c8d5142b566');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1472,7 +1467,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a852e519-3cd7-4af0-a4b3-e6fea173d56c">
+  <div id="df-49bf1641-15aa-4524-9ffc-19ce761e43a8">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1568,7 +1563,7 @@ title="Print to PDF"
 </table>
 <p>900 rows × 3 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a852e519-3cd7-4af0-a4b3-e6fea173d56c')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-49bf1641-15aa-4524-9ffc-19ce761e43a8')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1619,12 +1614,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a852e519-3cd7-4af0-a4b3-e6fea173d56c button.colab-df-convert');
+          document.querySelector('#df-49bf1641-15aa-4524-9ffc-19ce761e43a8 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a852e519-3cd7-4af0-a4b3-e6fea173d56c');
+          const element = document.querySelector('#df-49bf1641-15aa-4524-9ffc-19ce761e43a8');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1655,7 +1650,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-cbdf129e-670a-42fb-88b0-24809bc97da9">
+  <div id="df-99fe3b52-850e-4fa9-8947-336f9d92b790">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1811,7 +1806,7 @@ title="Print to PDF"
 </table>
 <p>900 rows × 8 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-cbdf129e-670a-42fb-88b0-24809bc97da9')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-99fe3b52-850e-4fa9-8947-336f9d92b790')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1862,12 +1857,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-cbdf129e-670a-42fb-88b0-24809bc97da9 button.colab-df-convert');
+          document.querySelector('#df-99fe3b52-850e-4fa9-8947-336f9d92b790 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-cbdf129e-670a-42fb-88b0-24809bc97da9');
+          const element = document.querySelector('#df-99fe3b52-850e-4fa9-8947-336f9d92b790');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1898,7 +1893,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-d2ff0f01-78fe-44c5-a967-4874cfc785ae">
+  <div id="df-dadca2d5-5d7e-4e44-9def-e52d0d1ad07a">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2102,7 +2097,7 @@ title="Print to PDF"
 </table>
 <p>900 rows × 12 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d2ff0f01-78fe-44c5-a967-4874cfc785ae')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-dadca2d5-5d7e-4e44-9def-e52d0d1ad07a')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2153,12 +2148,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-d2ff0f01-78fe-44c5-a967-4874cfc785ae button.colab-df-convert');
+          document.querySelector('#df-dadca2d5-5d7e-4e44-9def-e52d0d1ad07a button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d2ff0f01-78fe-44c5-a967-4874cfc785ae');
+          const element = document.querySelector('#df-dadca2d5-5d7e-4e44-9def-e52d0d1ad07a');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2191,22 +2186,8 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<section id="naive-bayes-classifier">
-<h2>Naive Bayes Classifier<a class="headerlink" href="#naive-bayes-classifier" title="Permalink to this headline">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#melakukan import library</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">make_scorer</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">,</span><span class="n">precision_score</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span> <span class="p">,</span><span class="n">precision_score</span><span class="p">,</span><span class="n">recall_score</span><span class="p">,</span><span class="n">f1_score</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">KFold</span><span class="p">,</span><span class="n">train_test_split</span><span class="p">,</span><span class="n">cross_val_score</span>
-<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
-</pre></div>
-</div>
-</div>
-</div>
+<section id="traning-model">
+<h2>Traning model<a class="headerlink" href="#traning-model" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#mengambil beberapa kolom</span>
@@ -2223,86 +2204,84 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-</div>
-</div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(630, 10)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#menghitung confusion matrix naive bayes</span>
-<span class="n">gaussian</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
-<span class="n">gaussian</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="n">Y_pred</span> <span class="o">=</span> <span class="n">gaussian</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span> 
-<span class="n">accuracy_nb</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">Y_pred</span><span class="p">)</span><span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">acc_gaussian</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">gaussian</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">NameError</span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">14</span><span class="o">-</span><span class="n">ec2357dcf456</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#melakukan split training dataset</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">X_train</span><span class="p">,</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">y_test</span><span class="o">=</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
-<span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">Y_pred</span><span class="p">)</span>
-<span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">Y_pred</span><span class="p">)</span>
-<span class="n">precision</span> <span class="o">=</span><span class="n">precision_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">Y_pred</span><span class="p">,</span><span class="n">average</span><span class="o">=</span><span class="s1">&#39;micro&#39;</span><span class="p">)</span>
-<span class="n">recall</span> <span class="o">=</span>  <span class="n">recall_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">Y_pred</span><span class="p">,</span><span class="n">average</span><span class="o">=</span><span class="s1">&#39;micro&#39;</span><span class="p">)</span>
-<span class="n">f1</span> <span class="o">=</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">Y_pred</span><span class="p">,</span><span class="n">average</span><span class="o">=</span><span class="s1">&#39;micro&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Confusion matrix for Naive Bayes</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">cm</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;accuracy_Naive Bayes: </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">accuracy</span>)
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;precision_Naive Bayes: </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">precision</span>)
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;recall_Naive Bayes: </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">recall</span>)
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f1-score_Naive Bayes : </span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span><span class="k">f1</span>)
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Confusion matrix for Naive Bayes
- [[69  0  0  0  0]
- [ 0 49  0  0  0]
- [ 0  0 84  0  0]
- [ 0  0  0 36  0]
- [ 0  0  0  0 32]]
-accuracy_Naive Bayes: 1.000
-precision_Naive Bayes: 1.000
-recall_Naive Bayes: 1.000
-f1-score_Naive Bayes : 1.000
-</pre></div>
-</div>
-</div>
-</div>
-<section id="create-modell-for-naive-bayes">
-<h3>create modell for naive bayes<a class="headerlink" href="#create-modell-for-naive-bayes" title="Permalink to this headline">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
-<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">model_selection</span>
-<span class="kn">import</span> <span class="nn">pickle</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
-<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-<span class="c1"># save the model to disk</span>
-<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;finalized_model.sav&#39;</span>
-<span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">))</span>
- 
-<span class="c1"># load the model from disk</span>
-<span class="n">loaded_model</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">))</span>
-
-<span class="c1"># apply the whole pipeline to data</span>
-<span class="n">dataArray</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.582609</span><span class="p">,</span> <span class="mf">0.333333</span><span class="p">,</span> <span class="mf">0.333333</span><span class="p">]</span>
-<span class="n">pred</span> <span class="o">=</span> <span class="n">loaded_model</span><span class="o">.</span><span class="n">predict</span><span class="p">([</span><span class="n">dataArray</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">pred</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3]
+<span class="ne">NameError</span>: name &#39;train_test_split&#39; is not defined
 </pre></div>
 </div>
 </div>
 </div>
 </section>
+<section id="proses-data-dengan-model">
+<h2>proses data dengan model<a class="headerlink" href="#proses-data-dengan-model" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">xgboost</span> <span class="kn">import</span> <span class="n">XGBClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">StackingClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="c1">#</span>
+<span class="c1"># Create a Randomforest classifier</span>
+<span class="c1">#</span>
+<span class="n">forest</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+                                <span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span>
+<span class="c1">#</span>
+<span class="c1"># Create a XGBoost classifier</span>
+<span class="c1">#</span>
+<span class="n">boost</span> <span class="o">=</span> <span class="n">XGBClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">,</span> <span class="n">verbosity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">use_label_encoder</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="c1">#</span>
+<span class="c1"># Create a Logistic regression classifier</span>
+<span class="c1">#</span>
+<span class="n">nbclassifier</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="c1">#</span>
+<span class="c1"># Create a stacking classifier</span>
+<span class="c1">#</span>
+<span class="n">estimators</span> <span class="o">=</span> <span class="p">[</span>
+     <span class="p">(</span><span class="s1">&#39;rf&#39;</span><span class="p">,</span> <span class="n">forest</span><span class="p">),</span>
+     <span class="p">(</span><span class="s1">&#39;xgb&#39;</span><span class="p">,</span> <span class="n">boost</span><span class="p">)</span>
+<span class="p">]</span>
+<span class="n">sclf</span> <span class="o">=</span> <span class="n">StackingClassifier</span><span class="p">(</span><span class="n">estimators</span><span class="o">=</span><span class="n">estimators</span><span class="p">,</span>
+                            <span class="n">final_estimator</span><span class="o">=</span><span class="n">nbclassifier</span><span class="p">,</span>
+                            <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="c1">#</span>
+<span class="c1"># Fit the random forest classifier; Print the scores</span>
+<span class="c1">#</span>
+<span class="n">forest</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Random forest model training Accuracy: </span><span class="si">{</span><span class="n">forest</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Random forest model test Accuracy: </span><span class="si">{</span><span class="n">forest</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1">#</span>
+<span class="c1"># Fit the XGBoost classifier; Print the scores</span>
+<span class="c1">#</span>
+<span class="n">boost</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">XGBoost model training Accuracy: </span><span class="si">{</span><span class="n">boost</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;XGBoost model test Accuracy: </span><span class="si">{</span><span class="n">boost</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1">#</span>
+<span class="c1"># Fit the Stacking classifier; Print the scores</span>
+<span class="c1">#</span>
+<span class="n">sclf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Stacking classifier training Accuracy: </span><span class="si">{</span><span class="n">sclf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Stacking classifier test Accuracy: </span><span class="si">{</span><span class="n">sclf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Random forest model training Accuracy: 1.00
+Random forest model test Accuracy: 1.00
+
+XGBoost model training Accuracy: 1.00
+XGBoost model test Accuracy: 1.00
+
+Stacking classifier training Accuracy: 1.00
+Stacking classifier test Accuracy: 1.00
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -2333,19 +2312,12 @@ f1-score_Naive Bayes : 1.000
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="notebooks7.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="notebooks10.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Create Model SK : Kredit Score (Tugas 7)</p>
+            <p class="prev-next-title">Penerapan Konsep Ensemble Stacking (Tugas 10)</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="notebooks9.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Preprocessing Data Using MinMaxScaler (Tugas 9)</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
