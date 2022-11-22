@@ -467,7 +467,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a831b4d9-33b9-495d-aadc-0a721ffa0c9a">
+  <div id="df-22d44393-4234-4267-b5a7-4ca6940dcb19">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -556,7 +556,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a831b4d9-33b9-495d-aadc-0a721ffa0c9a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-22d44393-4234-4267-b5a7-4ca6940dcb19')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -607,12 +607,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a831b4d9-33b9-495d-aadc-0a721ffa0c9a button.colab-df-convert');
+          document.querySelector('#df-22d44393-4234-4267-b5a7-4ca6940dcb19 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a831b4d9-33b9-495d-aadc-0a721ffa0c9a');
+          const element = document.querySelector('#df-22d44393-4234-4267-b5a7-4ca6940dcb19');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -648,6 +648,26 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pH            0
+Temprature    0
+Taste         0
+Odor          0
+Fat           0
+Turbidity     0
+Colour        0
+Grade         0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#membuat DataFrame kecuali kolom yang berisi target</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Grade&#39;</span><span class="p">])</span>
 <span class="c1">#mengecek apakah kolom targer sudah berhasil dihilangkan</span>
@@ -657,7 +677,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-9324fab2-500e-492a-9371-eed34b72125f">
+  <div id="df-e0addac0-75ae-47b6-bf91-2bdb19253b63">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -740,7 +760,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-9324fab2-500e-492a-9371-eed34b72125f')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-e0addac0-75ae-47b6-bf91-2bdb19253b63')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -791,12 +811,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-9324fab2-500e-492a-9371-eed34b72125f button.colab-df-convert');
+          document.querySelector('#df-e0addac0-75ae-47b6-bf91-2bdb19253b63 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-9324fab2-500e-492a-9371-eed34b72125f');
+          const element = document.querySelector('#df-e0addac0-75ae-47b6-bf91-2bdb19253b63');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -888,7 +908,7 @@ Stacking classifier test Accuracy: 1.00
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">classifier</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;model.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#pickle.dump(classifier, open(&quot;model.pkl&quot;, &quot;wb&quot;))</span>
 </pre></div>
 </div>
 </div>
