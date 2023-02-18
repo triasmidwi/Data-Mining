@@ -4,8 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diskritisasi (TUGAS 2) &#8212; Triasmi Dwi Farawati</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -673,7 +672,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="diskritisasi-tugas-2">
+  <div class="section" id="diskritisasi-tugas-2">
 <h1>Diskritisasi (TUGAS 2)<a class="headerlink" href="#diskritisasi-tugas-2" title="Permalink to this headline">#</a></h1>
 <ol class="simple">
 <li><p>Carilah data yang bertipe numerik ( data klassifikasi)</p></li>
@@ -715,7 +714,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-e980663d-a299-4f28-96df-0ae75bddf1b2">
+  <div id="df-cce3d430-fcf0-4c72-a9af-3cb485cdf416">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -826,7 +825,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-e980663d-a299-4f28-96df-0ae75bddf1b2')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-cce3d430-fcf0-4c72-a9af-3cb485cdf416')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -877,12 +876,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-e980663d-a299-4f28-96df-0ae75bddf1b2 button.colab-df-convert');
+          document.querySelector('#df-cce3d430-fcf0-4c72-a9af-3cb485cdf416 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-e980663d-a299-4f28-96df-0ae75bddf1b2');
+          const element = document.querySelector('#df-cce3d430-fcf0-4c72-a9af-3cb485cdf416');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -914,7 +913,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<section id="approaches-to-discretization-pendekatan-diskritisasi">
+<div class="section" id="approaches-to-discretization-pendekatan-diskritisasi">
 <h2>Approaches to Discretization (Pendekatan Diskritisasi<a class="headerlink" href="#approaches-to-discretization-pendekatan-diskritisasi" title="Permalink to this headline">#</a></h2>
 <blockquote>
 <div><p>Unsupervised</p>
@@ -936,15 +935,15 @@ title="Print to PDF"
 <li><p>equal-width intervals adalah diskritisasi dengan lebar data yang sama</p></li>
 <li><p>equal-frequency intervals adalah diskritisasi dengan jumlah data yang sama</p></li>
 </ol>
-</section>
-<section id="cut">
+</div>
+<div class="section" id="cut">
 <h2>Cut<a class="headerlink" href="#cut" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Cut adalah sebuah method pada library pandas untuk melakukan perhitungan equal width frequency intervals</p></li>
 </ul>
 <p>Syntax
 pd.cut(series, interval, right=True, label)</p>
-<section id="sepal-width">
+<div class="section" id="sepal-width">
 <h3>Sepal Width<a class="headerlink" href="#sepal-width" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Equal Width Intervals lebar kelopak bunga Iris</p></li>
@@ -976,7 +975,7 @@ pd.cut(series, interval, right=True, label)</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-72d2e76f-b9c7-4fd7-afc9-a07e15b77840">
+  <div id="df-4a4a741d-09fc-4b83-9365-5bb3e36154a5">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1060,7 +1059,7 @@ pd.cut(series, interval, right=True, label)</p>
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-72d2e76f-b9c7-4fd7-afc9-a07e15b77840')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-4a4a741d-09fc-4b83-9365-5bb3e36154a5')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1111,12 +1110,12 @@ pd.cut(series, interval, right=True, label)</p>
 
       <script>
         const buttonEl =
-          document.querySelector('#df-72d2e76f-b9c7-4fd7-afc9-a07e15b77840 button.colab-df-convert');
+          document.querySelector('#df-4a4a741d-09fc-4b83-9365-5bb3e36154a5 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-72d2e76f-b9c7-4fd7-afc9-a07e15b77840');
+          const element = document.querySelector('#df-4a4a741d-09fc-4b83-9365-5bb3e36154a5');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1169,8 +1168,8 @@ Name: sepal.width, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section id="petal-width">
+</div>
+<div class="section" id="petal-width">
 <h3>Petal Width<a class="headerlink" href="#petal-width" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Equal Width Intervals lebar mahkota bunga Iris</p></li>
@@ -1201,7 +1200,7 @@ Name: sepal.width, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-e9b1b329-4e56-4433-ab39-a2a1044cef9a">
+  <div id="df-2ce4c238-91b9-452a-9961-bd482a396c06">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1285,7 +1284,7 @@ Name: sepal.width, dtype: int64
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-e9b1b329-4e56-4433-ab39-a2a1044cef9a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-2ce4c238-91b9-452a-9961-bd482a396c06')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1336,12 +1335,12 @@ Name: sepal.width, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-e9b1b329-4e56-4433-ab39-a2a1044cef9a button.colab-df-convert');
+          document.querySelector('#df-2ce4c238-91b9-452a-9961-bd482a396c06 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-e9b1b329-4e56-4433-ab39-a2a1044cef9a');
+          const element = document.querySelector('#df-2ce4c238-91b9-452a-9961-bd482a396c06');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1394,8 +1393,8 @@ Name: petal.width, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section id="sepal-length">
+</div>
+<div class="section" id="sepal-length">
 <h3>Sepal Length<a class="headerlink" href="#sepal-length" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Equal Width Intervals panjang kelopak bunga Iris</p></li>
@@ -1427,7 +1426,7 @@ Name: petal.width, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-985b558f-10a3-4c87-8291-da677f9798da">
+  <div id="df-5b1ee020-e7b6-4bae-9bd2-0406f8100e6e">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1511,7 +1510,7 @@ Name: petal.width, dtype: int64
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-985b558f-10a3-4c87-8291-da677f9798da')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-5b1ee020-e7b6-4bae-9bd2-0406f8100e6e')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1562,12 +1561,12 @@ Name: petal.width, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-985b558f-10a3-4c87-8291-da677f9798da button.colab-df-convert');
+          document.querySelector('#df-5b1ee020-e7b6-4bae-9bd2-0406f8100e6e button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-985b558f-10a3-4c87-8291-da677f9798da');
+          const element = document.querySelector('#df-5b1ee020-e7b6-4bae-9bd2-0406f8100e6e');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1620,8 +1619,8 @@ Name: sepal.length, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section id="petal-length">
+</div>
+<div class="section" id="petal-length">
 <h3>Petal Length<a class="headerlink" href="#petal-length" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Equal Width Intervals panjang mahkota bunga Iris</p></li>
@@ -1652,7 +1651,7 @@ Name: sepal.length, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a00f6a4e-33a3-4a36-a31d-467b9f350eea">
+  <div id="df-0b8003c0-8a84-452d-8dbc-f730a2b4f511">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1736,7 +1735,7 @@ Name: sepal.length, dtype: int64
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a00f6a4e-33a3-4a36-a31d-467b9f350eea')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-0b8003c0-8a84-452d-8dbc-f730a2b4f511')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1787,12 +1786,12 @@ Name: sepal.length, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a00f6a4e-33a3-4a36-a31d-467b9f350eea button.colab-df-convert');
+          document.querySelector('#df-0b8003c0-8a84-452d-8dbc-f730a2b4f511 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a00f6a4e-33a3-4a36-a31d-467b9f350eea');
+          const element = document.querySelector('#df-0b8003c0-8a84-452d-8dbc-f730a2b4f511');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1845,16 +1844,16 @@ Name: petal.length, dtype: int64
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="qcut">
+</div>
+</div>
+<div class="section" id="qcut">
 <h2>Qcut<a class="headerlink" href="#qcut" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Qcut adalah sebuah method pada library pandas untuk melakukan perhitungan equal frequency intervals</p></li>
 </ul>
 <p>Syntax
 pd.qcut(series, interval, label)</p>
-<section id="id1">
+<div class="section" id="id1">
 <h3>Sepal Width<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Equal Frequency Intervals lebar kelopak bunga Iris</p></li>
@@ -1886,7 +1885,7 @@ pd.qcut(series, interval, label)</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-7eb7d798-b082-45b6-8270-f04821185f45">
+  <div id="df-ed6cf551-cc2a-40bb-a472-d8bd54d42b90">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1970,7 +1969,7 @@ pd.qcut(series, interval, label)</p>
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-7eb7d798-b082-45b6-8270-f04821185f45')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ed6cf551-cc2a-40bb-a472-d8bd54d42b90')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2021,12 +2020,12 @@ pd.qcut(series, interval, label)</p>
 
       <script>
         const buttonEl =
-          document.querySelector('#df-7eb7d798-b082-45b6-8270-f04821185f45 button.colab-df-convert');
+          document.querySelector('#df-ed6cf551-cc2a-40bb-a472-d8bd54d42b90 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-7eb7d798-b082-45b6-8270-f04821185f45');
+          const element = document.querySelector('#df-ed6cf551-cc2a-40bb-a472-d8bd54d42b90');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2079,8 +2078,8 @@ Name: sepal.width, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section id="id2">
+</div>
+<div class="section" id="id2">
 <h3>Petal Width<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Equal Frequency Intervals lebar mahkota bunga Iris</p></li>
@@ -2112,7 +2111,7 @@ Name: sepal.width, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-5d0f96e0-edc4-4aa1-8221-b3736eb596d2">
+  <div id="df-7f6d298d-6d87-4b26-b98c-c7ccdc39243b">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2196,7 +2195,7 @@ Name: sepal.width, dtype: int64
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-5d0f96e0-edc4-4aa1-8221-b3736eb596d2')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7f6d298d-6d87-4b26-b98c-c7ccdc39243b')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2247,12 +2246,12 @@ Name: sepal.width, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-5d0f96e0-edc4-4aa1-8221-b3736eb596d2 button.colab-df-convert');
+          document.querySelector('#df-7f6d298d-6d87-4b26-b98c-c7ccdc39243b button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-5d0f96e0-edc4-4aa1-8221-b3736eb596d2');
+          const element = document.querySelector('#df-7f6d298d-6d87-4b26-b98c-c7ccdc39243b');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2305,8 +2304,8 @@ Name: petal.width, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h3>Sepal Length<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Equal Frequency Intervals panjang kelopak bunga Iris</p></li>
@@ -2338,7 +2337,7 @@ Name: petal.width, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a87f7538-c4b5-4189-bbd2-f5a3782ecebe">
+  <div id="df-2abb623d-6f3a-4aeb-bc7c-ce545a6c265d">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2422,7 +2421,7 @@ Name: petal.width, dtype: int64
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a87f7538-c4b5-4189-bbd2-f5a3782ecebe')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-2abb623d-6f3a-4aeb-bc7c-ce545a6c265d')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2473,12 +2472,12 @@ Name: petal.width, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a87f7538-c4b5-4189-bbd2-f5a3782ecebe button.colab-df-convert');
+          document.querySelector('#df-2abb623d-6f3a-4aeb-bc7c-ce545a6c265d button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a87f7538-c4b5-4189-bbd2-f5a3782ecebe');
+          const element = document.querySelector('#df-2abb623d-6f3a-4aeb-bc7c-ce545a6c265d');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2531,8 +2530,8 @@ Name: sepal.length, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h3>Petal Length<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Equal Frequency Intervals panjang mahkota bunga Iris</p></li>
@@ -2564,7 +2563,7 @@ Name: sepal.length, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-e0df9417-62fc-420c-a160-6004dd696e6e">
+  <div id="df-9a7b244a-370f-4dad-bfbd-78fc41626f1c">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2648,7 +2647,7 @@ Name: sepal.length, dtype: int64
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-e0df9417-62fc-420c-a160-6004dd696e6e')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-9a7b244a-370f-4dad-bfbd-78fc41626f1c')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2699,12 +2698,12 @@ Name: sepal.length, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-e0df9417-62fc-420c-a160-6004dd696e6e button.colab-df-convert');
+          document.querySelector('#df-9a7b244a-370f-4dad-bfbd-78fc41626f1c button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-e0df9417-62fc-420c-a160-6004dd696e6e');
+          const element = document.querySelector('#df-9a7b244a-370f-4dad-bfbd-78fc41626f1c');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2757,9 +2756,9 @@ Name: petal.length, dtype: int64
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="definisi-entropy-based-binning">
+</div>
+</div>
+<div class="section" id="definisi-entropy-based-binning">
 <h2>Definisi Entropy-based Binning<a class="headerlink" href="#definisi-entropy-based-binning" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>Metode untuk mengelompokkan data <em>numeric</em> menjadi <em>categorical</em></p></li>
@@ -2775,7 +2774,7 @@ Name: petal.length, dtype: int64
 \displaystyle Entropy(S) &amp;= \sum_{i=0}^{k} -pi \ log_{2} \ pi \\
 \end{align*}
 \end{split}\]</div>
-<section id="persiapan">
+<div class="section" id="persiapan">
 <h3>Persiapan<a class="headerlink" href="#persiapan" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Impor modul log2 dari <em>package math</em></p></li>
@@ -2827,9 +2826,9 @@ Name: petal.length, dtype: int64
 </div>
 </div>
 </div>
-<section id="functions">
+<div class="section" id="functions">
 <h4>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h4>
-<section id="fungsi-menghitung-banyaknya-data-setiap-kategori">
+<div class="section" id="fungsi-menghitung-banyaknya-data-setiap-kategori">
 <h5>Fungsi menghitung banyaknya data setiap kategori<a class="headerlink" href="#fungsi-menghitung-banyaknya-data-setiap-kategori" title="Permalink to this headline">#</a></h5>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2844,8 +2843,8 @@ Name: petal.length, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section id="fungsi-menghitung-banyaknya-data-setiap-kategori-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan">
+</div>
+<div class="section" id="fungsi-menghitung-banyaknya-data-setiap-kategori-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan">
 <h5>Fungsi menghitung banyaknya data setiap kategori berdasarkan nilai pembagi atau <em>split value</em> yang diberikan<a class="headerlink" href="#fungsi-menghitung-banyaknya-data-setiap-kategori-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan" title="Permalink to this headline">#</a></h5>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2862,8 +2861,8 @@ Name: petal.length, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section id="fungsi-menghitung-perbedaan-gain-antara-entropi-inisial-dengan-entropi-nilai-pembagi-yang-diberikan">
+</div>
+<div class="section" id="fungsi-menghitung-perbedaan-gain-antara-entropi-inisial-dengan-entropi-nilai-pembagi-yang-diberikan">
 <h5>Fungsi menghitung perbedaan <em>gain</em> antara entropi inisial dengan entropi nilai pembagi yang diberikan<a class="headerlink" href="#fungsi-menghitung-perbedaan-gain-antara-entropi-inisial-dengan-entropi-nilai-pembagi-yang-diberikan" title="Permalink to this headline">#</a></h5>
 <hr class="docutils" />
 <div class="math notranslate nohighlight">
@@ -2878,8 +2877,8 @@ Name: petal.length, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section id="fungsi-menghitung-entropy">
+</div>
+<div class="section" id="fungsi-menghitung-entropy">
 <h5>Fungsi menghitung entropy<a class="headerlink" href="#fungsi-menghitung-entropy" title="Permalink to this headline">#</a></h5>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2896,8 +2895,8 @@ Name: petal.length, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section id="fungsi-menghitung-info-entropy-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan">
+</div>
+<div class="section" id="fungsi-menghitung-info-entropy-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan">
 <h5>Fungsi menghitung Info entropy berdasarkan nilai pembagi atau <em>split value</em> yang diberikan<a class="headerlink" href="#fungsi-menghitung-info-entropy-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan" title="Permalink to this headline">#</a></h5>
 <hr class="docutils" />
 <div class="math notranslate nohighlight">
@@ -2914,8 +2913,8 @@ Name: petal.length, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section id="implementasi">
+</div>
+<div class="section" id="implementasi">
 <h5>Implementasi<a class="headerlink" href="#implementasi" title="Permalink to this headline">#</a></h5>
 <ul class="simple">
 <li><p>Hitung target <em>entropy</em></p></li>
@@ -3017,11 +3016,11 @@ Name: petal.length, dtype: int64
 </div>
 </div>
 </div>
-</section>
-</section>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -3035,7 +3034,7 @@ Name: petal.length, dtype: int64
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
